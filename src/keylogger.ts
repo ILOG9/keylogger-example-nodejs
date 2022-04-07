@@ -28,7 +28,9 @@ class Keylogger {
     }
 
     /**
-     * recibimos un dato y concatenamos los datos pulsados por teclado en un archivo log
+     * recibimos un caracter y lo concatenamos con los demas
+     * datos pulsados por teclado en un archivo log
+     * si este archivo no existe lo crea
      * @param data
      */
     #appendDataToTXTFile(data: any) {
